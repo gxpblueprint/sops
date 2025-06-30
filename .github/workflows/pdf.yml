@@ -27,6 +27,28 @@ jobs:
                  -o build/csv-sop.pdf \
                  --toc --number-sections
 
+      - name: Set build timestamp
+        id: ts
+        run: echo "ts=$(date +'%Y%m%d-%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Copy PDF into docs folder
+        run: |
+          mkdir -p docs/csv/superseded
+          if ls docs/csv/csv-sop-*.pdf 1> /dev/null 2>&1; then
+            mv docs/csv/csv-sop-*.pdf docs/csv/superseded/
+          fi
+          cp build/csv-sop.pdf "docs/csv/csv-sop-${{ steps.ts.outputs.ts }}.pdf"
+
+      - name: Commit PDF to repository
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/csv/csv-sop-*.pdf docs/csv/superseded/* 2>/dev/null || true
+          git commit -m "docs(csv): add generated PDF" || echo "No changes"
+          branch="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+          git push origin HEAD:"$branch"
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:

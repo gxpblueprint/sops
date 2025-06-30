@@ -5,6 +5,6 @@ It starts with one family:
 
 | SOP Family | Folder | Status |
 |------------|--------|--------|
-| Computerised System Validation | [`docs/csv/`](docs/csv/_main.md)) | Draft |
+| Computerised System Validation | [`docs/csv/_main.md`](docs/csv/_main.md)) | Draft |
 
 > Want to contribute?  Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and open a Pull Request.

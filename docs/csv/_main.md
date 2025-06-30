@@ -134,8 +134,8 @@ Both vendor-supplied and internally developed/configured systems are covered.
 
 ## 7  Appendices  
 
-* [Appendix A — RTM template](app-a_rtm.md)  
-* [Appendix B — Validation Plan checklist](app-b_vp.md)
+* [Appendix A — RTM template](appendices/app-a_rtm.md)
+* [Appendix B — Validation Plan checklist](appendices/app-b_vp.md)
 
 ![Validation V-model lifecycle](./_images/v-model.png){#fig:vmodel}
 

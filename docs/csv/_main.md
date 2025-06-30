@@ -4,57 +4,97 @@ version: 0.1-draft
 effective-date: TBC
 ---
 
-# 1 Purpose
-This SOP defines the process for validating GMP computerised systems (new implementations and upgrades) to ensure they are fit for intended use and comply with regulatory expectations. It aligns with ISPE GAMP 5 guidance and requirements in 21 CFR Part 11 and EU GMP Annex 11. The procedure follows a risk-based lifecycle approach from planning through qualification and release to maintain a validated state.
+# Procedure for computerised system validation (CSV)
 
-# 2 Scope
-This procedure applies to all GxP computerised systems used in development, manufacturing or quality control at [Company]. It covers new implementations and significant upgrades to existing systems, including software, hardware, network infrastructure and interfaces. The SOP focuses on on-premise deployments; cloud or SaaS systems require additional vendor qualification beyond this scope.
+## Purpose
+This SOP defines how to validate GMP computerised systems so they are fit for use and compliant with
+GAMP 5, 21 CFR Part 11 and EU Annex 11. It covers new implementations and upgrades using a risk-based lifecycle
+approach to achieve and maintain a validated state.
 
-# 3 Responsibilities
-| Role | Responsibility |
-|------|---------------|
-| System Owner | Define user needs, ensure validation activities occur and provide resources. Maintain compliance once live. |
-| QA | Oversee the validation process, review and approve plans, protocols and results. Ensure change control preserves the validated state. |
-| IT/Automation/Engineering | Install and support the system, execute technical testing and manage configuration or upgrades under change control. |
-| Validation Lead | Plan and coordinate validation, maintain documentation and traceability. |
-| Vendor/Supplier | Provide a system meeting specifications with supporting documentation and assistance. |
-| End Users | Participate in defining requirements and executing PQ/UAT. Follow SOPs and complete training before use. |
+## Scope
+This procedure applies to all GxP computerised systems used in development, manufacturing or quality
+control at [Company]. It includes software, hardware, network infrastructure and interfaces. Cloud or SaaS systems
+require additional qualification beyond this SOP.
 
-# 4 Definitions
-* **Computerised System** – hardware, software and associated equipment processing GxP data.
-* **CSV** – Computerised System Validation.
-* **URS** – User Requirements Specification.
-* **Functional/Design Specification (FS/DS)** – documents describing how the system meets the URS.
-* **DQ** – Design Qualification confirming the design satisfies requirements.
-* **FAT** – Factory Acceptance Test at the supplier site.
-* **SAT** – Site Acceptance Test after delivery.
-* **IQ** – Installation Qualification verifying correct installation.
-* **OQ** – Operational Qualification verifying functionality under defined conditions.
-* **PQ** – Performance Qualification demonstrating routine use meets requirements.
-* **RTM** – Traceability Matrix linking requirements to tests.
-* **GxP** – Good Practice guidelines affecting product quality or patient safety.
-* **Change Control** – formal process to manage system changes.
 
-# 5 Procedure
-![Validation life-cycle placeholder](./_images/v-model.png)
+## Definitions
+* **Computerised system** – hardware, software and associated equipment processing GxP data.
+* **CSV** – computerised system validation.
+* **URS** – user requirements specification describing intended use and regulatory needs.
+* **Functional/design specification** – details how the system meets the URS.
+* **DQ** – design qualification confirming the design satisfies the URS.
+* **FAT** – factory acceptance test at the supplier site.
+* **SAT** – site acceptance test after delivery.
+* **IQ** – installation qualification verifying correct installation.
+* **OQ** – operational qualification verifying functionality under defined conditions.
+* **PQ** – performance qualification demonstrating routine use meets requirements.
+* **RTM** – requirements traceability matrix linking requirements to tests.
+* **GxP** – good practice guidelines affecting product quality or patient safety.
+* **Change control** – formal process to manage system changes.
+## Roles and responsibilities
 
-1. **Planning and Initiation** – start the project, define scope and create a validation plan based on risk assessment.
-2. **Requirements Definition** – develop or update the URS and maintain traceability.
-3. **Vendor Selection and Quality Assessment** – assess suppliers and review their documentation.
-4. **Design and Configuration** – document functional and design specifications and perform risk assessment.
-5. **Factory Acceptance Test (FAT)** – verify major functions at the supplier site when applicable.
-6. **Site Acceptance Test (SAT)** – confirm correct installation and basic operation at the user site.
-7. **Installation Qualification (IQ)** – verify installation and environment meet specifications.
-8. **Operational Qualification (OQ)** – execute detailed functional tests under defined conditions.
-9. **Performance Qualification (PQ) / User Acceptance** – demonstrate the system supports intended workflows with trained users.
-10. **Data Migration Qualification** – verify accuracy and completeness of any migrated data.
-11. **Release Decision and Documentation** – complete the RTM, resolve deviations and prepare a validation summary report for QA approval.
-12. **Post-Implementation Activities** – manage changes under change control, conduct periodic reviews, handle incidents and maintain backups and documentation.
+* **System owner** – defines user needs, ensures validation activities occur and maintains compliance once live.
+* **Quality assurance** – provides independent oversight, reviewing and approving documentation and deviations.
+* **IT/automation/engineering** – installs and supports the system, executes technical testing and manages upgrades.
+* **Validation lead** – coordinates the validation project and keeps traceability.
+* **Vendor/supplier** – provides a system meeting specifications with supporting documentation.
+* **End users** – help define requirements and perform PQ. They follow SOPs and complete training before use.
+## Procedure
 
-# 6 Appendices
-* [Appendix A — RTM Template](app-a_rtm.md)
-* [Appendix B — Validation Plan Checklist](app-b_vp.md)
+### 1 Planning and initiation
+Initiate projects or changes within the quality system. Define scope
+and objectives, perform a risk assessment and create a validation plan listing deliverables, responsibilities and
+acceptance criteria.
 
+### 2 Requirements definition
+Develop or update the URS from user needs and regulatory requirements. Maintain
+bidirectional traceability from requirements through design and testing using an RTM.
+
+### 3 Vendor selection and quality assessment
+Evaluate suppliers to ensure they operate an acceptable quality
+system and provide adequate documentation. Document any audits or assessments performed.
+
+### 4 Design and configuration
+Create functional and design specifications describing how the system will meet
+the URS. For configurable systems, document the configuration. Perform a functional risk assessment to identify
+and mitigate potential failures.
+
+### 5 Factory acceptance test (FAT)
+Where appropriate, verify major functions at the supplier site before
+delivery. Document any issues for resolution prior to installation.
+
+### 6 Site acceptance test (SAT)
+After delivery, confirm correct installation and basic operation in the user
+environment. Resolve issues before formal qualification begins.
+
+### 7 Installation qualification (IQ)
+Verify that hardware, software and infrastructure are installed correctly
+and documented. Capture evidence such as version numbers, configuration settings and initial backups.
+
+### 8 Operational qualification (OQ)
+Execute detailed functional tests under defined conditions to demonstrate
+the system operates as intended. Include security, error handling and audit trail checks. Record any deviations
+and their resolution.
+
+### 9 Performance qualification (PQ)
+Demonstrate that the system and users can perform routine workflows reliably. Use
+real or simulated production scenarios and confirm SOPs and training are in place.
+
+### 10 Data migration qualification
+If data is migrated from a legacy system, plan and verify the transfer. Ensure
+records are complete and accurate in the new system and document any discrepancies.
+
+### 11 Release decision and documentation
+Complete the RTM and resolve all deviations. Prepare a validation summary
+report describing activities, results and conclusions. QA approval authorises release for GMP use.
+
+### 12 Post-implementation activities
+Maintain the validated state through change control, periodic review,
+incident management, backups and ongoing training. Store validation documentation in a controlled archive.
+
+## Appendices
+* [Appendix A — RTM template](app-a_rtm.md)
+* [Appendix B — Validation plan checklist](app-b_vp.md)
 ![Placeholder diagram](./_images/placeholder.png)
 
 Download the RTM workbook: [rtm-template.xlsx](./_files/rtm-template.xlsx)

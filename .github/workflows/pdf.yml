@@ -40,6 +40,7 @@ jobs:
           cp build/csv-sop.pdf "docs/csv/csv-sop-${{ steps.ts.outputs.ts }}.pdf"
 
       - name: Commit PDF to repository
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
